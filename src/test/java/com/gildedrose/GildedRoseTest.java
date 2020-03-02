@@ -8,7 +8,7 @@ import org.junit.Test;
 public class GildedRoseTest {
 
     @Test
-    public void foo() {
+    public void should_reduce_quality_and_sell_in_when_other_name() {
         Item[] items = new Item[] { new Item("foo", 1, 5) };
         GildedRose app = new GildedRose(items);
         app.update_quality();
