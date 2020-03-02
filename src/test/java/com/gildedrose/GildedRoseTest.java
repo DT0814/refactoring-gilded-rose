@@ -17,4 +17,14 @@ public class GildedRoseTest {
         assertThat(app.items[0].sell_in, is(0));
     }
 
+    @Test
+    public void should_add_quality_when_name_equal_Aged_Brie_and_quality_less_than_50() {
+        Item[] items = new Item[] { new Item("Aged Brie", 1, 5) };
+        GildedRose app = new GildedRose(items);
+        app.update_quality();
+        assertEquals("Aged Brie", app.items[0].name);
+        assertThat(app.items[0].quality, is(6));
+        assertThat(app.items[0].sell_in, is(0));
+    }
+
 }
